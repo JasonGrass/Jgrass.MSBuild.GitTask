@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <OutputType>Library</OutputType>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <Version>0.0.1-alpha05</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <BuildOutputTargetFolder>tasks</BuildOutputTargetFolder>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Build.Framework" Version="17.12.6" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.12.6" />
+    <PackageReference Update="@(PackageReference)" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CliWrap" Version="3.6.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\tasks\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Assets\build\**" Pack="True" PackagePath="build\" />
+    <None Include="Assets\scripts\**" Pack="True" PackagePath="scripts\" />
+    <None Include="Assets\readme.md" Pack="True" PackagePath="" />
+    <Content Include="$(OutputPath)\*.dll" Pack="true" PackagePath="tasks\$(TargetFramework)\" />
+  </ItemGroup>
+
+</Project>

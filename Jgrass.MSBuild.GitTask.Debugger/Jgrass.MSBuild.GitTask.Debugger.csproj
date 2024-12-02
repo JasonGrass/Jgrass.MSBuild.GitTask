@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <IsInGitHookTaskDebugMode>true</IsInGitHookTaskDebugMode>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <GitLargeFileInterceptHardLimit>100000</GitLargeFileInterceptHardLimit>
+        <GitLargeFileInterceptSoftLimit>9000</GitLargeFileInterceptSoftLimit>
+    </PropertyGroup>
+
+    <Import Project="..\Jgrass.MSBuild.GitTask\Assets\build\Jgrass.MSBuild.GitTask.targets" />
+
+</Project>

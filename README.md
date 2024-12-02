@@ -1,0 +1,1 @@
+# Jgrass.MSBuild.GitTask

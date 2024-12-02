@@ -1,0 +1,17 @@
+<Project>
+    <PropertyGroup Condition=" $(IsInGitHookTaskDebugMode) == 'true' ">
+        <NuGetTaskFolder>$(MSBuildThisFileDirectory)..\..\bin\$(Configuration)\netstandard2.0\</NuGetTaskFolder>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" $(IsInGitHookTaskDebugMode) != 'true' ">
+        <NuGetTaskFolder >$(MSBuildThisFileDirectory)..\tasks\netstandard2.0\</NuGetTaskFolder>
+    </PropertyGroup>
+
+    <UsingTask TaskName="LargeFileInterceptTask" AssemblyFile="$(NuGetTaskFolder)Jgrass.MSBuild.GitTask.dll" />
+
+    <Target Name="GitHookTask" AfterTargets="Build">
+        <LargeFileInterceptTask MsBuildProjectDirectory="$(MSBuildProjectDirectory)" MsBuildThisFileDirectory="$(MSBuildThisFileDirectory)" 
+                                FileSizeHardLimit="$(GitLargeFileInterceptHardLimit)" FileSizeSoftLimit="$(GitLargeFileInterceptSoftLimit)" />
+    </Target>
+
+</Project>
