@@ -14,11 +14,17 @@ internal class GitCommandExecutor
             throw new ArgumentNullException(nameof(command), "Not set any git command.");
         }
 
-        var args = command
-            .Split(' ')
-            .Where(s => !string.IsNullOrWhiteSpace(s))
-            .Where(s => s.ToLower() != "git")
-            .ToArray();
+        var args = command.Split(' ').Where(s => !string.IsNullOrWhiteSpace(s)).ToArray();
+
+        if (args.Length < 1)
+        {
+            throw new InvalidOperationException("Invalid git command.");
+        }
+
+        if (args[0].ToLower() == "git")
+        {
+            args = args.Skip(1).ToArray();
+        }
 
         if (args.Length < 1)
         {
