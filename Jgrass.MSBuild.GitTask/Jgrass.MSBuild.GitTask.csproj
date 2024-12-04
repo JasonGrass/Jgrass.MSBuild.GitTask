@@ -7,7 +7,7 @@
     <LangVersion>latest</LangVersion>
     <OutputType>Library</OutputType>
     <DevelopmentDependency>true</DevelopmentDependency>
-    <Version>0.0.1-alpha05</Version>
+    <Version>1.0.0-alpha</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <BuildOutputTargetFolder>tasks</BuildOutputTargetFolder>
     <NoPackageAnalysis>true</NoPackageAnalysis>
@@ -31,7 +31,7 @@
   <ItemGroup>
     <None Include="Assets\build\**" Pack="True" PackagePath="build\" />
     <None Include="Assets\scripts\**" Pack="True" PackagePath="scripts\" />
-    <None Include="Assets\readme.md" Pack="True" PackagePath="" />
+    <None Include="..\README.md" Pack="True" PackagePath="" />
     <None Include="$(OutputPath)\*.dll" Pack="true" PackagePath="tasks\$(TargetFramework)\"/>
   </ItemGroup>
 

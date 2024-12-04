@@ -13,7 +13,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Jgrass.MSBuild.GitTask" Version="0.0.1-alpha05" />
+        <PackageReference Include="Jgrass.MSBuild.GitTask" Version="1.0.0-alpha" />
     </ItemGroup>
 
 </Project>
