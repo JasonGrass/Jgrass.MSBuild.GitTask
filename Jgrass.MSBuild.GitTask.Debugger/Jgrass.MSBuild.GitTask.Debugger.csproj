@@ -11,6 +11,7 @@
     <PropertyGroup>
         <GitLargeFileInterceptHardLimit>100000</GitLargeFileInterceptHardLimit>
         <GitLargeFileInterceptSoftLimit>9000</GitLargeFileInterceptSoftLimit>
+        <LargeFileInterceptTaskEnable>True</LargeFileInterceptTaskEnable>
     </PropertyGroup>
 
     <Import Project="..\Jgrass.MSBuild.GitTask\Assets\build\Jgrass.MSBuild.GitTask.targets" />

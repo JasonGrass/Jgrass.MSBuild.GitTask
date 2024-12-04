@@ -28,11 +28,21 @@ public class LargeFileInterceptTask : Microsoft.Build.Utilities.Task
     /// </summary>
     public string FileSizeSoftLimit { get; set; } = "1000000";
 
+    /// <summary>
+    /// 此 Task 否是开启
+    /// </summary>
+    public string Enable { get; set; } = "true";
+
     public override bool Execute()
     {
 #if DEBUG
-        // Debugger.Launch();
+        Debugger.Launch();
 #endif
+
+        if (!string.IsNullOrWhiteSpace(Enable) && Enable.Trim().ToLower() != "true")
+        {
+            return true;
+        }
 
         if (string.IsNullOrWhiteSpace(MsBuildProjectDirectory))
         {

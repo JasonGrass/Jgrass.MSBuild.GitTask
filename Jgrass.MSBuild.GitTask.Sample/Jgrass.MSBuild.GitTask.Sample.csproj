@@ -16,5 +16,4 @@
         <PackageReference Include="Jgrass.MSBuild.GitTask" Version="0.0.1-alpha05" />
     </ItemGroup>
 
-
 </Project>

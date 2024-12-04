@@ -11,7 +11,8 @@
 
     <Target Name="GitHookTask" AfterTargets="Build">
         <LargeFileInterceptTask MsBuildProjectDirectory="$(MSBuildProjectDirectory)" MsBuildThisFileDirectory="$(MSBuildThisFileDirectory)" 
-                                FileSizeHardLimit="$(GitLargeFileInterceptHardLimit)" FileSizeSoftLimit="$(GitLargeFileInterceptSoftLimit)" />
+                                FileSizeHardLimit="$(GitLargeFileInterceptHardLimit)" FileSizeSoftLimit="$(GitLargeFileInterceptSoftLimit)"
+                                Enable="$(LargeFileInterceptTaskEnable)"/>
     </Target>
 
 </Project>
