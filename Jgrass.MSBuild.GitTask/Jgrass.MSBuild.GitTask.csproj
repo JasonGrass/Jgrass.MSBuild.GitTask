@@ -7,13 +7,12 @@
     <LangVersion>latest</LangVersion>
     <OutputType>Library</OutputType>
     <DevelopmentDependency>true</DevelopmentDependency>
-    <Version>1.0.0-alpha</Version>
+    <Version>1.0.0-beta</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <BuildOutputTargetFolder>tasks</BuildOutputTargetFolder>
     <NoPackageAnalysis>true</NoPackageAnalysis>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/JasonGrass/Jgrass.MSBuild.GitTask</RepositoryUrl>
   </PropertyGroup>
@@ -36,7 +35,6 @@
     <None Include="Assets\build\**" Pack="True" PackagePath="build\" />
     <None Include="Assets\scripts\**" Pack="True" PackagePath="scripts\" />
     <None Include="..\README.md" Pack="True" PackagePath="" />
-    <None Include="..\LICENSE" Pack="True" PackagePath="" />
     <None Include="$(OutputPath)\*.dll" Pack="true" PackagePath="tasks\$(TargetFramework)\"/>
   </ItemGroup>
 
