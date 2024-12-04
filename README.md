@@ -1,8 +1,10 @@
 # Jgrass.MSBuild.GitTask
 
+[![](https://img.shields.io/nuget/v/Jgrass.MSBuild.GitTask?logo=nuget)](https://www.nuget.org/packages/Jgrass.MSBuild.GitTask/)
+
 git task for msbuild, base `netstandard2.0`
 
-## LargeFileInterceptTask
+## 🍉 LargeFileInterceptTask
 
 Implement interception of committed file size through git pre-commit hook. If the size exceeds the set value, then either prompt or intercept.
 
