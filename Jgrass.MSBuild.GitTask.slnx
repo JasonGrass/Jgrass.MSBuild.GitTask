@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Jgrass.MSBuild.GitTask.Debugger/Jgrass.MSBuild.GitTask.Debugger.csproj" />
+  <Project Path="Jgrass.MSBuild.GitTask.Sample/Jgrass.MSBuild.GitTask.Sample.csproj" />
+  <Project Path="Jgrass.MSBuild.GitTask/Jgrass.MSBuild.GitTask.csproj" />
+</Solution>
